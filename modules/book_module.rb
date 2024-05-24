@@ -1,6 +1,6 @@
 require 'json'
 require_relative '../books'
 
-module BooksModule
+module BookModule
 
 end
