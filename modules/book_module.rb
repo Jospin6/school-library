@@ -15,6 +15,10 @@ module BookModule
     
     def save_book
         data = []
+        @books.each do |book|
+            data.push({id: book.id, title: book.title, published_year: book.published_year, isAvailable: book.isAvailable})
+        end
+        File.write('../data_files/books.json', JSON.generate(data))
     end
     
 end
