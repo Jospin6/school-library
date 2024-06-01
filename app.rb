@@ -22,8 +22,14 @@ class App
             list_students
         when '3'
             list_borrows
+        when '4'
+            add_book
+        when '5'
+            add_student
+        when '6'
+            add_loan
         else
-            puts 'Please, Enter a number between 1 and 3' 
+            puts 'Please, Enter a number between 1 and 6' 
         end
     end
     
@@ -103,7 +109,5 @@ class App
         @borrow.push(Borrow.new(book_id, student_id, borrow_date, return_id))
 
         puts "New Loan added successfully"
-    end
-    
-    
+    end 
 end
