@@ -13,4 +13,12 @@ class App
       @students = load_students
       @borrow = load_borrows
     end
+
+    def list_all_books
+        puts "All of our Books"
+        @books.each do |book|
+            puts "Book title: #{book.title}, author: #{book.author}, published year #{book.published_year}"
+        end
+    end
+    
 end
