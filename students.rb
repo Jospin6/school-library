@@ -1,6 +1,8 @@
 
 class Students
     attr_accessor :name, :second_name, :degree
+    attr_reader :id
+    
     def initialize(name, second_name, degree)
         @id = rand(1..1000)
         @name = name

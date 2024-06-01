@@ -1,5 +1,7 @@
 class Borrow
     attr_accessor :book_id, :student_id, :borrow_date, :return_date
+    attr_reader :id
+    
     def initialize(book_id, student_id, borrow_date, return_date)
         @id = rand(1..1000)
         @book_id = book_id
