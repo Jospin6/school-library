@@ -3,7 +3,7 @@ require_relative '../students'
 
 module StudentModule
     def load_students
-        file = '../data_file/students.json'
+        file = '../data_files/students.json'
         data = []
         if File.exist?(file) && File.read(file) != ''
             JSON.parse(File.read(file)).each do |student|
@@ -13,4 +13,13 @@ module StudentModule
         data
     end
     
+    def save_student
+        data = []
+        @student.each do |element|
+            data.push({id: element.id, name: element.name, second_name: element.second_name, degree: element.degree})
+        end
+        File.write('../data_files/students.json', JSON.generate(data))
+    end
+    
+
 end
