@@ -18,7 +18,7 @@ class Main
         end
         @app.save_book
         @app.save_student
-        @app.create_borrow
+        @app.save_borrow
         puts 'Thank you for using our Library!'
     end
 
