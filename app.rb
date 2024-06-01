@@ -81,6 +81,28 @@ class App
         degree = gets.chomp
 
         @students.push(Students.new(name, second_name, degree))
+
+        puts "New Student added successfully"
+    end
+    
+    def add_loan
+        puts "Add new Loan"
+
+        print "Please, type the book ID: "
+        book_id = gets.chomp
+
+        print "Please, type the Student ID: "
+        student_id = gets.chomp
+
+        print "Please, type the loan date: "
+        borrow_date = gets.chomp
+
+        print "Please, type the due date: "
+        return_id = gets.chomp
+
+        @borrow.push(Borrow.new(book_id, student_id, borrow_date, return_id))
+
+        puts "New Loan added successfully"
     end
     
     
