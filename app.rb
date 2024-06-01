@@ -8,6 +8,11 @@ require_relative './modules/borrow_module'
 require_relative './modules/student_module'
 
 class App
+
+    include BookModule
+    include StudentModule
+    include BorrowModule
+
     def initialize
       @books = load_books
       @students = load_students
