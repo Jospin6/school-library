@@ -17,7 +17,7 @@ module StudentModule
     
     def save_student
         data = []
-        @student.each do |element|
+        @students.each do |element|
             data.push({id: element.id, name: element.name, second_name: element.second_name, degree: element.degree})
         end
         File.write('./data_files/students.json', JSON.generate(data))
