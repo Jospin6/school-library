@@ -14,6 +14,20 @@ class App
       @borrow = load_borrows
     end
 
+    def get_options(option)
+        case option
+        when '1'
+            list_all_books
+        when '2'
+            list_students
+        when '3'
+            list_borrows
+        else
+            puts 'Please, Enter a number between 1 and 3' 
+        end
+    end
+    
+
     def list_all_books
         puts "All of our Books"
         @books.each do |book|
