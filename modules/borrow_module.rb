@@ -9,6 +9,8 @@ module BorrowModule
             JSON.parse(File.read(file)).each do |borrow|
                 data.push(Borrow.new(borrow['book_id'], borrow['student_id'], borrow['borrow_date'], borrow['return_date']))
             end
+        else
+            File.write(file, [])
         end
         data
     end

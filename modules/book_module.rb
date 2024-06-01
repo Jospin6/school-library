@@ -9,6 +9,8 @@ module BookModule
             JSON.parse(File.read(file)).each do |element|
                 data.push(Books.new(element['title'], element['author'], element['published_year'], element['isAvailable']))
             end
+        else
+            File.write(file, [])
         end
         data
     end

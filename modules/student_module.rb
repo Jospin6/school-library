@@ -9,6 +9,8 @@ module StudentModule
             JSON.parse(File.read(file)).each do |student|
                 data.push(Students.new(student['name'], student['second_name'], student['degree']))
             end
+        else
+            File.write(file, [])
         end
         data
     end
