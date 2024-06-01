@@ -28,5 +28,12 @@ class App
         end
     end
     
+    def list_borrows
+        puts "All borrows"
+        @borrow.each do |borrow|
+            puts "N° #{borrow.id}, book ID: #{borrow.book_id}, student ID: #{borrow.student_id}, loan date: #{borrow.borrow_date}, due date: #{borrow.return_date}"
+        end
+    end
+    
     
 end
