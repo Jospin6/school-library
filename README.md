@@ -1,5 +1,4 @@
 # School library
-<hr />
 
 ###  The app is develped in ruby and allows users to:
 
