@@ -34,3 +34,6 @@ class Main
         puts '7 - Exit'
     end
 end
+
+execute_app = Main.new
+execute_app.run 
