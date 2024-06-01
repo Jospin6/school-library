@@ -49,5 +49,23 @@ class App
         end
     end
     
+    def add_book
+        puts "Add new book to the store"
+
+        print "Please, type the book title: "
+        title = gets.chomp
+
+        print 'Please, type the book author: '
+        author = gets.chomp
+
+        print 'Please, type the book published year [Enter date in format (yyyy-mm-dd)]: '
+        published_year = gets.chomp
+
+        isAvailable = true
+
+        @books.push(Books.new(title, author, published_year, isAvailable))
+
+    end
+    
     
 end
