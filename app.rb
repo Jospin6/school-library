@@ -50,7 +50,7 @@ class App
     end
     
     def add_book
-        puts "Add new book to the store"
+        puts "Add new Book to the store"
 
         print "Please, type the book title: "
         title = gets.chomp
@@ -65,6 +65,22 @@ class App
 
         @books.push(Books.new(title, author, published_year, isAvailable))
 
+        puts "New book added successfully"
+    end
+    
+    def add_student
+        puts "Add new Student"
+
+        print "Please, type the student name: "
+        name = gets.chomp
+
+        print "Please, type the student last name: "
+        second_name = gets.chomp
+
+        print "Please, type the student degree: "
+        degree = gets.chomp
+
+        @students.push(Students.new(name, second_name, degree))
     end
     
     
